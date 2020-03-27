@@ -1,4 +1,7 @@
 .box {
     display: flex;
     padding: 10px;
+    background-color: rgb(42, 24, 207);
+    color: whitesmoke;
+    border: 10px solid blueviolet
  }
