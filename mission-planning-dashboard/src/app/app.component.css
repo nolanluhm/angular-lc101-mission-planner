@@ -3,5 +3,6 @@
     padding: 10px;
     background-color: rgb(42, 24, 207);
     color: whitesmoke;
-    border: 10px solid blueviolet
+    border: 10px solid blueviolet;
+    justify-content: center;
  }
