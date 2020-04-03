@@ -17,7 +17,7 @@
         <span class="editable-text" (click)="editingRocketName = true;">{{ rocketName }}</span>
     </span>
     <ng-template #editRocketNameBlock>
-        <input #rocketName (keyup.enter)="updateRocketName(rocketName.value)" value="{{ rocketName }}"/>
+        <input #rocket (keyup.enter)="updateRocketName(rocketName.value)" value="{{ rocketName }}"/>
         <button (click)="updateRocketName(rocketName.value)">save</button>
     </ng-template>
 </h3>
