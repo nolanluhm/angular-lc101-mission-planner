@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrewComponent implements OnInit {
 
+  inCrew: boolean = false;
+
   memberBeingEdited: object = null;
 
   crew: object[] = [
@@ -21,7 +23,16 @@ export class CrewComponent implements OnInit {
   }
 
   add(memberName: string, isFirst: boolean) {
-    this.crew.push({name: memberName, firstMission: isFirst});
+    for (let member in this.crew) {
+      if (this.crew[member]['name'] === memberName) {
+        this.inCrew = true;
+      }
+    }
+
+    if (!this.inCrew) {
+      this.crew.push({name: memberName, firstMission: isFirst})
+    }
+    this.inCrew = false;
   }
 
   remove(member: object) {
